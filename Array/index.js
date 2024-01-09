@@ -1,14 +1,11 @@
-let family = [
 
-    {name:'Join', age:30},
-    {name:'Marry', age:28}
-];
-
-if(family.length > 0) {
-    family.map((item, index) => {
-        if(item.age > 29){
-            console.log('age > 29 is name:', item.name)
-        }
-    })
+let a = (x,y,callback) => {
+    let sum = x + y;
+    callback(sum);
 }
-console.log('my family:', family)
+
+let callbackFunc = (sum) => {
+    console.log("sum", sum);
+}
+
+console.log("Sum = ", a(5,7,callbackFunc));

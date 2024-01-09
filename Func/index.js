@@ -1,13 +1,11 @@
-let obj = {
-    name:'Join',
-    address: 'japan',
-    fuc:function(){
-        return (
-            console.log("hello word inside function")
-        )
-    }
-};
 
-console.log(`What is your name ?
-My name is  ${obj.name}`);
-console.log('call function:', obj.fuc());
+let a = (x,y,callback) => {
+    let sum = x + y;
+    callback(sum);
+}
+
+let callbackFunc = (sum) => {
+    console.log("sum", sum);
+}
+
+a(5,7,callbackFunc)
